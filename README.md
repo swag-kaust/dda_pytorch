@@ -13,11 +13,9 @@ In the training stage, the input data are from the source domain and the mean of
 
 ----------
 The only difference between data manipulations at the training and inference stages is that _during training a random pixel_ from the same dataset is used for cross-correlation, rather than the _mean of random pixels_ at the inference stage.
-### Training 
-![Train diagram](assets/flow_train.png)
 
-### Testing 
-![Test diagram](assets/flow_test.png)
+![Train diagram](assets/flow_train_test.png)
+
 
 ## Classification accuracy
 The notebooks in this repository explore performance of the DDA method against several setups when transferring knowledge from MNIST to MNIST-M datasets. 
