@@ -1,0 +1,14 @@
+__pycache__
+env
+bw_*
+out_*
+nohup.*
+.ipynb_checkpoints
+dataset/MNIST
+*.pyc
+*.pth
+*.gz
+*.pt
+*.txt
+*.png
+
