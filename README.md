@@ -2,6 +2,8 @@
 
 This is the PyTorch implementation of workflow and experiments from  **"[Direct domain adaptation through mutual linear transformations](place_link_here!)"** by [Tariq Alkhalifah](https://sites.google.com/a/kaust.edu.sa/tariq/) and [Oleg Ovcharenko](https://ovcharenkoo.com/), 2021.
 
+![Catchy pic](assets/before_after.png)
+
 ## Method
 We propose the direct domain adaptation (DDA) approach to reduce the domain gap between two datasets. The process includes a series of linear operations on both datasets :
  1) Cross-correlation of the input data with the a sample pixel (or the mean of sample pixels) from images of the same domain. 
@@ -12,46 +14,10 @@ In the training stage, the input data are from the source domain and the mean of
 ----------
 The only difference between data manipulations at the training and inference stages is that _during training a random pixel_ from the same dataset is used for cross-correlation, rather than the _mean of random pixels_ at the inference stage.
 ### Training 
-```mermaid
-graph LR
-S(Source<br>dataset) -- Pre-compute --> GSACORR((Mean<br>ACORR))
-S(Source<br>dataset) -- Draw during <br>training --> SRND_PX((Random<br>pixel))
-T(Target<br>dataset) -- Pre-compute--> GTACORR((Mean<br>ACORR))
-T(Target<br>dataset) -- Draw during <br>training --> TRND_PX((Random<br>pixel))
-
-S --> SXCORR{XCORR}
-SRND_PX --> SXCORR
-SXCORR --> SCONV{CONV}
-GTACORR --> SCONV
-SCONV --> OUT_S(Source<br>dataset DDA)
-
-T --> TXCORR{XCORR}
-TRND_PX --> TXCORR
-TXCORR --> TCONV{CONV}
-GSACORR --> TCONV
-TCONV --> OUT_T(Target<br>dataset DDA)
-```
+![Train diagram](assets/flow_train.png)
 
 ### Testing 
-```mermaid
-graph LR
-S(Source<br>dataset) -- Pre-compute --> GSACORR((Mean<br>ACORR))
-S(Source<br>dataset) -- Pre-compute --> SRND_PX((Mean<br>pixel))
-T(Target<br>dataset) -- Pre-compute--> GTACORR((Mean<br>ACORR))
-T(Target<br>dataset) -- Pre-compute --> TRND_PX((Mean<br>pixel))
-
-S --> SXCORR{XCORR}
-SRND_PX --> SXCORR
-SXCORR --> SCONV{CONV}
-GTACORR --> SCONV
-SCONV --> OUT_S(Source<br>dataset DDA)
-
-T --> TXCORR{XCORR}
-TRND_PX --> TXCORR
-TXCORR --> TCONV{CONV}
-GSACORR --> TCONV
-TCONV --> OUT_T(Target<br>dataset DDA)
-```
+![Test diagram](assets/flow_test.png)
 
 ## Classification accuracy
 The notebooks in this repository explore performance of the DDA method against several setups when transferring knowledge from MNIST to MNIST-M datasets. 
@@ -63,6 +29,10 @@ The notebooks in this repository explore performance of the DDA method against s
 |--------|------|------|---------|
 | MNIST  | 0.988 | 0.996 | 0.990    |
 | MNIST-M  | 0.911 | 0.344 | 0.734    |
+
+
+### Download MNIST-M dataset
+Follow instructions in [this repo]{https://github.com/fungtion/DANN_py3} to download the target MNIST-M dataset.
 
 
 ### Acknowledgements
