@@ -4,11 +4,10 @@ bw_*
 out_*
 nohup.*
 .ipynb_checkpoints
-dataset/MNIST
+dataset
 *.pyc
 *.pth
 *.gz
 *.pt
 *.txt
-*.png
 
