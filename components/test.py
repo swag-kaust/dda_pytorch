@@ -1,3 +1,5 @@
+"""https://github.com/fungtion/DANN_py3"""
+
 import os
 import torch.backends.cudnn as cudnn
 import torch.utils.data
@@ -24,8 +26,7 @@ def test(dataset_name, model_root='models'):
     img_transform_source = transforms.Compose([
         transforms.Resize(image_size),
         transforms.ToTensor(),
-#         transforms.Normalize(mean=(0.1307,), std=(0.3081,))
-        transforms.Normalize(mean=(0.5,), std=(0.5,))
+        transforms.Normalize(mean=(0.1307,), std=(0.3081,))
     ])
 
     img_transform_target = transforms.Compose([

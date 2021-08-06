@@ -32,7 +32,7 @@ The notebooks in this repository explore performance of the DDA method against s
 
 
 ### Download MNIST-M dataset
-Follow instructions in [this repo]{https://github.com/fungtion/DANN_py3} to download the target MNIST-M dataset.
+Follow instructions in [this repo](https://github.com/fungtion/DANN_py3) to download the target MNIST-M dataset.
 
 
 ### Acknowledgements

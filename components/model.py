@@ -1,3 +1,5 @@
+"""https://github.com/fungtion/DANN_py3"""
+
 import torch.nn as nn
 from components.functions import ReverseLayerF
 
