@@ -1,6 +1,6 @@
-# Domain adaptation through mutual linear transformations
+# Direct Domain Adaptation Through Reciprocal Linear Transformations
 
-This is the PyTorch implementation of workflow and experiments from  **"[Direct domain adaptation through mutual linear transformations](place_link_here!)"** by [Tariq Alkhalifah](https://sites.google.com/a/kaust.edu.sa/tariq/) and [Oleg Ovcharenko](https://ovcharenkoo.com/), 2021.
+This is the PyTorch implementation of workflow and experiments from  **"[Direct Domain Adaptation through reciprocal linear transformations](place_link_here!)"** by [Tariq Alkhalifah](https://sites.google.com/a/kaust.edu.sa/tariq/) and [Oleg Ovcharenko](https://ovcharenkoo.com/), 2021.
 
 ![Catchy pic](assets/before_after.png)
 
