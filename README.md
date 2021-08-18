@@ -16,18 +16,6 @@ The only difference between data manipulations at the training and inference sta
 
 ![Train diagram](assets/flow_train_test.png)
 
-### Reference
-```
-@misc{alkhalifah2021direct,
-      title={Direct domain adaptation through reciprocal linear transformations}, 
-      author={Tariq Alkhalifah and Oleg Ovcharenko},
-      year={2021},
-      eprint={2108.07600},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
-}
-```
-
 
 ## Classification accuracy
 The notebooks in this repository explore performance of the DDA method against several setups when transferring knowledge from MNIST to MNIST-M datasets. 
@@ -43,6 +31,19 @@ The notebooks in this repository explore performance of the DDA method against s
 
 ### Download MNIST-M dataset
 Follow instructions in [this repo](https://github.com/fungtion/DANN_py3) to download the target MNIST-M dataset.
+
+
+### Reference
+```
+@misc{alkhalifah2021direct,
+      title={Direct domain adaptation through reciprocal linear transformations}, 
+      author={Tariq Alkhalifah and Oleg Ovcharenko},
+      year={2021},
+      eprint={2108.07600},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+```
 
 
 ### Acknowledgements
