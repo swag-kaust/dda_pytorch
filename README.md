@@ -1,6 +1,6 @@
 # Direct Domain Adaptation Through Reciprocal Linear Transformations
 
-This is the PyTorch implementation of workflow and experiments from  **"[Direct Domain Adaptation through reciprocal linear transformations](place_link_here!)"** by [Tariq Alkhalifah](https://sites.google.com/a/kaust.edu.sa/tariq/) and [Oleg Ovcharenko](https://ovcharenkoo.com/), 2021.
+This is the PyTorch implementation of workflow and experiments from  **"[Direct Domain Adaptation through reciprocal linear transformations](https://arxiv.org/abs/2108.07600)"** by [Tariq Alkhalifah](https://sites.google.com/a/kaust.edu.sa/tariq/) and [Oleg Ovcharenko](https://ovcharenkoo.com/), 2021.
 
 ![Catchy pic](assets/before_after.png)
 
@@ -15,6 +15,18 @@ In the training stage, the input data are from the source domain and the mean of
 The only difference between data manipulations at the training and inference stages is that _during training a random pixel_ from the same dataset is used for cross-correlation, rather than the _mean of random pixels_ at the inference stage.
 
 ![Train diagram](assets/flow_train_test.png)
+
+### Reference
+```
+@misc{alkhalifah2021direct,
+      title={Direct domain adaptation through reciprocal linear transformations}, 
+      author={Tariq Alkhalifah and Oleg Ovcharenko},
+      year={2021},
+      eprint={2108.07600},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+```
 
 
 ## Classification accuracy
